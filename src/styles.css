@@ -106,6 +106,7 @@ hr
 
     display: flex;
 }
+
 .inputArea input 
 {
 
@@ -192,6 +193,6 @@ margin-top: 20px;
 
 
 
-body.keyboard {
-    height: calc(100% - 500px); /* add padding for keyboard */
+.keyboard {
+    z-index: 1; /* add padding for keyboard */
 }
