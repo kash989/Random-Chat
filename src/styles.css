@@ -18,20 +18,17 @@ body, html {
 .chatBox
 {
     background-color: white;
-border: 1px solid black;
-    height: 95%;
-    width: 80%;
+border: 2px solid black;
+    height: 100%;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 10px 10px 10px grey;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 59%;
+   
     padding-bottom: 2px;
 }
 .heading
 {
-    background-color: #97FFF4;
+    background-color: #793FDF;
     height: 10%;
     border-bottom: 1px solid black;
     border-radius: 10px 10px 0px 0px;
@@ -58,6 +55,7 @@ border: 1px solid black;
     width: 100%;
     background-image: url('chatbg.png');
     overflow-y: auto;
+    background-color: #f0f0f0;
     
 }
 
@@ -70,7 +68,7 @@ border: 1px solid black;
     margin-right: 10px;
     margin-top: 10px;
     padding: 10px;
-    background-color: #7091F5;
+    background-color: #793FDF;
     
     max-width: 30%;
     text-align: left;
@@ -80,7 +78,7 @@ border: 1px solid black;
 }
 #msgBox .you
 {
-    background-color: #97FFF4;
+    background-color: white;
     position: relative;
     margin-left: 20px;
     margin-top: 10px;
@@ -88,7 +86,7 @@ border: 1px solid black;
    max-width: 30%;
     text-align: left;
     color: black;
-   border: 1px solid #97FFF4;
+   border: 1px solid #f0f0f0;
     border-radius: 10px;
     overflow-wrap: break-word;
 }

@@ -57,4 +57,8 @@ socket.in('room'+ arg[1]).emit('recieveMsg',arg[0]);
  
 });
 
-httpServer.listen(3000);
+const port= process.env.port || 3000;
+httpServer.listen(port, "0.0.0.0", function()
+{
+  console.log('server running');
+});
