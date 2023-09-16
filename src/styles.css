@@ -51,7 +51,7 @@ border: 2px solid black;
 }
 #msgBox
 {
-    height: 85%;
+    min-height: 85%;
     width: 100%;
     background-image: url('chatbg.png');
     overflow-y: auto;
@@ -192,6 +192,6 @@ margin-top: 20px;
 
 
 
-.keyboard {
+body.keyboard {
     height: calc(100% - 500px); /* add padding for keyboard */
 }

@@ -71,9 +71,9 @@ document.body.addEventListener("focus", event => {
         case "INPUT":
         case "TEXTAREA":
         case "SELECT":
-            document.getElementById("msgBox").classList.add("keyboard");
+            document.body.classList.add("keyboard");
     }
 }, true); 
 document.body.addEventListener("blur", () => {
-    document.getElementById("msgBox").classList.remove("keyboard");
+    document.body.classList.remove("keyboard");
 }, true); 
