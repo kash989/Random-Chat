@@ -16,7 +16,7 @@ var name;
 
 app.get('/', function(req,res)
 {
-    res.sendFile("home");
+    res.sendFile(__dirname + "/src/index.html");
 });
 
 app.post("/", function(req,res)

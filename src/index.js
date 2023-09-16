@@ -64,3 +64,16 @@ function details()
      
 
     
+        // focus events don't bubble, must use capture phase
+document.body.addEventListener("focus", event => {
+    const target = event.target;
+    switch (target.tagName) {
+        case "INPUT":
+        case "TEXTAREA":
+        case "SELECT":
+            document.getElementById("msgBox").classList.add("keyboard");
+    }
+}, true); 
+document.body.addEventListener("blur", () => {
+    document.getElementById("msgBox").classList.remove("keyboard");
+}, true); 
