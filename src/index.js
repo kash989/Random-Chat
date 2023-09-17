@@ -38,7 +38,8 @@ function showbtn()
 function details()
     {
      fullname= document.getElementById('fname').value; 
-     localStorage.setItem('varname', fullname);
+    var gender= document.querySelector("input[type='radio'][name=gndr]:checked").value;
+     localStorage.setItem('varname', [fullname, gender]);
     }
 
     setInterval(function()
@@ -48,7 +49,14 @@ function details()
 
     socket.on('details', args =>
     {
-        document.getElementById('person').innerHTML=args;
+        document.getElementById('person').innerHTML=args[0];
+        if(args[1]=="Male")
+        {
+            document.getElementById("icon").src="boy.avif";
+        }
+        else{
+            document.getElementById("icon").src="girl.avif";
+        }
     })
 
         socket.on('recieveMsg' ,(args)=>
