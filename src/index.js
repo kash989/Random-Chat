@@ -9,21 +9,21 @@
         })
         function send()
         {
-            const message= document.getElementById('text').value;
+            const message= document.getElementById('txt').value;
           
             var my= document.createElement('p');
            my.setAttribute('class', 'me');
            my.innerHTML=message;
-           document.getElementById('msgBox').appendChild(my);
+           document.getElementById('messages').appendChild(my);
 
             socket.emit("sendMsg", [message,room]);
-            document.getElementById('text').value="";
-            document.getElementById('msgBox').scrollTo(0,document.getElementById('msgBox').scrollHeight);
+            document.getElementById('txt').value="";
+            document.getElementById('messages').scrollTo(0,document.getElementById('messages').scrollHeight);
             showbtn();
         }
 function showbtn()
 {
-    const message= document.getElementById('text').value;
+    const message= document.getElementById('txt').value;
     if(message!="")
     {
         document.getElementById('submit').style.visibility="visible";
@@ -57,23 +57,10 @@ function details()
             var you= document.createElement('p');
            you.setAttribute('class', 'you');
            you.innerHTML=args;
-           document.getElementById('msgBox').appendChild(you);
+           document.getElementById('messages').appendChild(you);
             
         });
 
      
 
     
-        // focus events don't bubble, must use capture phase
-document.body.addEventListener("focus", event => {
-    const target = event.target;
-    switch (target.tagName) {
-        case "INPUT":
-        case "TEXTAREA":
-        case "SELECT":
-            document.getElementById("foot").classList.add("keyboard");
-    }
-}, true); 
-document.body.addEventListener("blur", () => {
-    document.getElementById("foot").classList.remove("keyboard");
-}, true); 

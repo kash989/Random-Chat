@@ -22,7 +22,7 @@ app.get('/', function(req,res)
 app.post("/", function(req,res)
 {
    name=req.body.fullName;
- res.sendFile(__dirname + "/src/chat.html");
+ res.sendFile(__dirname + "/src/newchat.html");
 });
 
 io.on("connection", (socket) => {
