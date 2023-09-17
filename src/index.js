@@ -51,7 +51,7 @@ function details()
 
     socket.on('details', args =>
     {
-        document.getElementById('person').innerHTML=args[0];
+        document.getElementById('person').innerHTML=args[0][0];
         if(args[0][1]=="Male")
         {
             document.getElementById("icon").src="boy.avif";
