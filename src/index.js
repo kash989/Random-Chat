@@ -39,7 +39,7 @@ function details()
     {
      fullname= document.getElementById('fname').value; 
     var gender= document.querySelector("input[type='radio'][name=gndr]:checked").value;
-    var arr=[fullname,gender];
+    var arr=[fullname,gender,room];
      localStorage.setItem('varname', JSON.stringify(arr));
     }
 
