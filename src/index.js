@@ -45,7 +45,7 @@ function details()
 
     setInterval(function()
       {
-          socket.emit("detail", localStorage.getItem('varname'));
+          socket.emit("detail", JSON.parse(localStorage.getItem('varname')));
       },1000);
 
     socket.on('details', args =>
