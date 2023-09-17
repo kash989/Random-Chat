@@ -1,7 +1,7 @@
 
         const socket = io();
         var room;
-       var fullname;
+        
         socket.on("roomno", (args) => {
             
             room = args;
@@ -39,19 +39,20 @@ function details()
     {
      fullname= document.getElementById('fname').value; 
     var gender= document.querySelector("input[type='radio'][name=gndr]:checked").value;
-    var arr=[fullname,gender,room];
+    var arr=[fullname,gender];
      localStorage.setItem('varname', JSON.stringify(arr));
     }
 
     setInterval(function()
       {
-          socket.emit("detail", JSON.parse(localStorage.getItem('varname')));
+        console.log(room);
+          socket.emit("detail", [JSON.parse(localStorage.getItem('varname')),room]);
       },1000);
 
     socket.on('details', args =>
     {
         document.getElementById('person').innerHTML=args[0];
-        if(args[1]=="Male")
+        if(args[0][1]=="Male")
         {
             document.getElementById("icon").src="boy.avif";
         }

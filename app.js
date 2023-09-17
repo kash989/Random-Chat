@@ -45,14 +45,15 @@ io.on("connection", (socket) => {
 
   socket.on('detail',(args)=>
   {
-    socket.in('room'+ args[2]).emit("details",args);
-    //console.log(args);
+    socket.in('room'+ args[1]).emit("details",args);
+    console.log(args[1]);
     
   })
 
  socket.on('sendMsg', (arg)=>
  {
 socket.in('room'+ arg[1]).emit('recieveMsg',arg[0]);
+console.log(arg);
  })
  
  
