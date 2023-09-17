@@ -40,7 +40,7 @@ function details()
      fullname= document.getElementById('fname').value; 
     var gender= document.querySelector("input[type='radio'][name=gndr]:checked").value;
     var arr=[fullname,gender];
-     localStorage.setItem('varname', arr);
+     localStorage.setItem('varname', JSON.stringify(arr));
     }
 
     setInterval(function()
