@@ -39,7 +39,8 @@ function details()
     {
      fullname= document.getElementById('fname').value; 
     var gender= document.querySelector("input[type='radio'][name=gndr]:checked").value;
-     localStorage.setItem('varname', [fullname, gender]);
+    var arr=[fullname,gender];
+     localStorage.setItem('varname', arr);
     }
 
     setInterval(function()

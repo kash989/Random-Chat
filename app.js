@@ -46,7 +46,7 @@ io.on("connection", (socket) => {
   socket.on('detail',(args)=>
   {
     socket.in('room'+ room).emit("details",args);
-    console.log(args);
+    //console.log(args);
     
   })
 
